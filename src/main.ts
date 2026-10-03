@@ -8,6 +8,7 @@ import jsonWorker from 'monaco-editor/esm/vs/language/json/json.worker?worker';
 import router from './router';
 import App from './App.vue';
 import './styles.css';
+import './ledger.css';
 
 (self as typeof self & { MonacoEnvironment?: { getWorker: (_moduleId: string, label: string) => Worker } }).MonacoEnvironment = {
   getWorker: (_moduleId: string, label: string) => label === 'json' ? new jsonWorker() : new editorWorker()
